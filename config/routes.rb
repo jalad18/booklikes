@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  get '/fetch_users_likes', to: 'users#fetch_users_likes'
+  get '/favorite_books', to: "users#fetch_favorite_books"
 end
