@@ -1,6 +1,39 @@
 <h1><i> Home Page</i></h1>
-<%= button_to "Create Users", new_user_path, :method => :get%>
-<br>
-<%= button_to "Create Books", new_book_path, :method => :get%>
-<br>
-<%= button_to "Create Likes", new_like_path, :method => :get%>
+
+<table>
+<thead>
+    <th>Users</th>
+</thead>
+<tbody>
+<tr>
+<td><%= button_to "Create Users", new_user_path, :method => :get%></td>
+<td><%= button_to "Records", users_path, :method => :get%></td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<thead>
+    <th>Books</th>
+</thead>
+<tbody>
+<tr>
+<td><%= button_to "Create Books", new_book_path, :method => :get%></td>
+<td><%= button_to "Records", books_path, :method => :get%></td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<thead>
+    <th>Likes</th>
+</thead>
+<tbody>
+<tr>
+<td><%= button_to "Create Likes", new_like_path, :method => :get%></td>
+<td><%= button_to "Records", likes_path, :method => :get%></td>
+</tr>
+</tbody>
+</table>

@@ -25,6 +25,9 @@ class LikesController < ApplicationController
         @likes= Like.find(params[:id])
     end
 
+    def index
+        @likes = Like.all
+    end
     def update
         @likes = Like.find(params[:id])
         if @likes.update(set_params)

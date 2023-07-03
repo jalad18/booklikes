@@ -5,6 +5,10 @@ class BooksController < ApplicationController
         render json: {fav_books: @fav_books}
     end
 
+    def index
+        @books = Book.all
+    end
+    
     def new
         @new_book = Book.new
     end
