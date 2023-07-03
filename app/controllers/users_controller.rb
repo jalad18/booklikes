@@ -13,6 +13,19 @@ class UsersController < ApplicationController
         end
     end
 
+    def edit
+        @user = User.find(params[:id])
+    end
+
+    def update
+        @user = User.find(params[:id])
+        if @user.update(set_params)
+            render json: {message: "User Updated!"}
+        else
+            render json: {message: @user.errors}
+        end
+    end
+
     def count_user
         @users = User.all
         if @users.count < 0

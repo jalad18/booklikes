@@ -1,0 +1,15 @@
+<%=form_with model: @user do |form|%>
+    <div>
+        <%= form.label :name%>
+        <%= form.text_field :name%>
+    </div>
+    <br>
+    <div>
+        <%= form.label :email%>
+        <%= form.text_field :email%>
+    </div>
+    <br>
+    <div>
+        <%= form.submit%>
+    </div>
+<%end%>

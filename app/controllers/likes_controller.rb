@@ -21,6 +21,19 @@ class LikesController < ApplicationController
         end
     end
 
+    def edit
+        @likes= Like.find(params[:id])
+    end
+
+    def update
+        @likes = Like.find(params[:id])
+        if @likes.update(set_params)
+            render json:{message: "Likes updated"}
+        else
+            render json:{message: @likes.errors}
+        end
+    end
+
     def new
         @likes = Like.new
     end

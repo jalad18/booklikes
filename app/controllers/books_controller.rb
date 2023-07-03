@@ -39,6 +39,19 @@ class BooksController < ApplicationController
         render json: {message: "Book successfully deleted!"}
     end
 
+    def edit
+        @books = Book.find(params[:id])
+    end
+
+    def update
+        @book = Book.find(params[:id])
+        if @book.update(set_params)
+            render json: {message:"Books updated successfully!"}
+        else
+            render json: {message: @books.errors}
+        end
+    end
+
     private
 
     def set_params

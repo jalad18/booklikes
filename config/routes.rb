@@ -3,6 +3,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  root "homes#index"
+  resources :users
+  resources :books
+  resources :likes
   get '/fetch_users_likes', to: 'likes#fetch_users_likes'
   get '/favorite_books', to: "books#fetch_favorite_books"
   get '/user_name', to: "users#fetch_user_name"
@@ -12,10 +17,13 @@ Rails.application.routes.draw do
   get '/create_books', to: "books#create"
   get '/create_likes', to: "likes#create"
   get '/fetch_likes', to: "likes#fetch_all_likes"
-  get '/fetch count', to: "likes#fetch_likes_count"
+  get '/like_count', to: "likes#fetch_likes_count"
   get '/book_count', to: "books#fetch_book_count"
   get '/user_count', to: "users#count_user"
   get '/likes_delete', to: "likes#destroy_likes"
   get '/users_delete', to: "users#destroy_users"
   get '/books_delete', to: "books#destroy_books"
+  put '/users_update', to: "users#update"
+  get '/books_update', to: "books#update"
+  put '/likes_update', to: "likes#update"
 end

@@ -1,0 +1,12 @@
+<%= form_with model: @books do |form|%>
+    <div>
+        <%= form.label :name%>
+        <%= form.text_field :name%>
+    </div>
+    <br>
+    
+    <div>
+        <%= form.submit%>
+    </div>
+    
+<%end%>

@@ -1,0 +1,15 @@
+<%= form_with model: @likes do |form|%>
+    <div>
+        <%= form.label :user_id%>
+        <%= form.number_field :user_id%>
+    </div>
+    <br>
+    <div>
+        <%= form.label :book_id%>
+        <%= form.number_field :book_id%>
+    </div>
+    <br>
+    <div>
+        <%= form.submit%>
+    </div>
+<%end%>
